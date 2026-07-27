@@ -225,7 +225,7 @@ The available UART interfaces vary by Raspberry Pi model. The following table su
   `UART2` through to `UART5`: PL011 (disabled by default)
 
 | Raspberry Pi 5, 500, 500+, and Compute Module 5
-| `UART0` through to `UART4`: PL011 (disabled by default) +
+| `UART0` through to `UART4` and `UART10` (also called the debug UART): PL011 (disabled by default) +
   No mini UART
 |===
 
@@ -238,18 +238,24 @@ $ dtoverlay=uart1,txd1_pin=32,rxd1_pin=33
 
 [[primary-and-secondary-uart]]
 ===== Primary and secondary UARTs
-The *primary UART* is the main serial interface that a Raspberry Pi exposes. This is the UART that you typically use when you connect external devices and for a Linux serial console. For all Raspberry Pis other than Raspberry Pi 5, the primary UART is routed to specific GPIO pins:
+
+The *primary UART* is the main serial interface that a Raspberry Pi exposes. This is the UART that you typically use when you connect external devices and for a Linux serial console.
+
+For all Raspberry Pi devices other than Raspberry Pi 5, the primary UART is routed to specific GPIO pins:
 
 * *GPIO 14* (transmit) is pin 8 on the GPIO header.
 * *GPIO 15* (receive) is pin 10 on the GPIO header.
 
-On Raspberry Pi 5, the primary UART is exposed through the dedicated debug header instead.
+On Raspberry Pi 5, by default the primary UART is exposed through the dedicated debug header instead (`UART10`). This dedicated debug header is a three-pin header labelled `UART`. However, the following `config.txt` settings can change the primary UART:
+
+- If xref:../computers/config_txt.adoc#enable_rp1_uart[`enable_rp1_uart`] is set to 1, Raspberry Pi 5 routes later firmware debug messages, including all file accesses, through the UART on GPIO 14 and 15.
+- If there is no UART cable plugged into the dedicated debug header and xref:../computers/config_txt.adoc#enable_uart[`enable_uart`] is set to 1, Raspberry Pi 5 automatically routes kernel logging debug output to the UART on GPIO 14 and 15.
 
 The *secondary UART* is another serial interface available internally on the system; it isn't typically exposed through the GPIO header pins by default. On models with built-in wireless, this UART is commonly connected internally to the Bluetooth controller. This allows the system to communicate with Bluetooth hardware without using the external GPIO pins.
 
 .Primary and secondary UARTs
 |===
-| Model | Primary (Linux console) | Secondary (Bluetooth on Raspberry Pis with wireless)
+| Model | Primary (Linux console) | Secondary (Bluetooth on Raspberry Pi devices with wireless)
 
 | Raspberry Pi Zero
 | `UART0`

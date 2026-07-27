@@ -167,7 +167,7 @@ Default: `0x0`
 
 Raspberry Pi 5 only.
 
-When set to `1`, firmware initialises RP1 UART0 to 115200bps and doesn't reset RP1 before starting the OS (separately configurable using `pciex4_reset=1`).
+When set to `1`, firmware initialises RP1 UART0 to 115200 bps and doesn't reset RP1 before starting the OS (separately configurable using `pciex4_reset=1`).
 This makes it easier to get UART output on the 40-pin header in early boot-code, for instance during bare-metal debug.
 
 Default: `0x0`

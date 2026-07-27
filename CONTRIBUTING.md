@@ -6,6 +6,10 @@ The public repository is a mirror of an internal repository from which the site 
 
 We encourage and value all types of contributions from our community. Please make sure to read the following section before making your contribution. It makes it a lot easier for the Raspberry Pi Technical Documentation team (the maintainers) and smooths out the experience for all involved. We look forward to your contributions.
 
+> **AI usage**
+>
+> If you use AI to write your contribution, check the content is accurate before submitting it to us. Don't attribute AI as a co-author.
+
 ## Contribute
 
 To suggest changes to this documentation:
@@ -26,6 +30,7 @@ To suggest changes to this documentation:
    * If your PR can be included as-is, we use the patch mechanism to bring it across to the internal repository and commit it there. When the change is published on the Raspberry Pi Documentation website, it is mirrored to the public repository with you listed as author. We then close the original PR.
    * If your PR needs significant editing or prompts a wider change to the documentation, we take on that work in our internal repository. We'll let you know if that's the case and how long we expect it to take.
    If we don't bring your initial changes over as a patch, we use the [co-author mechanism](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors) to ensure you get credit for your contribution.
+   * If you used a co-author credit for your AI tool, we remove it from the PR merge commit.
 
 Alternatively, [open an issue](https://github.com/raspberrypi/documentation/issues) to discuss proposed changes.
 
