@@ -143,7 +143,7 @@ NOTE: `smartmontools` doesn't assign vendor-unique field names to USB devices be
 |C7  | 199 | Ultra DMA CRC Error Count| Communication errors between drive and host (cable/interface issues)
 |F1  | 241 | Total GiB Written| Total amount of data written to the drive, rounded down to the nearest GiB
 |F2  | 242 | Total GiB Read| Total amount of data read from the drive, rounded down to the nearest GiB.
-|F5  | 245 | Unused
+|F5  | 245 2+| Unused
 |===
 
 
