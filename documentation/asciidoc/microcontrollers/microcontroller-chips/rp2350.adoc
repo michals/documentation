@@ -86,9 +86,10 @@ The boot ROM can auto-detect the architecture for which a second-stage binary ha
 
 You can use the Raspberry Pi *Pico 2* family of microcontroller boards as development boards and as reference designs for other RP2350-based boards. For discussions about third-party RP2350-based boards, see the  https://forums.raspberrypi.com/viewforum.php?f=147[Raspberry Pi forums].
 
-Raspberry Pi offers design files for the RP2350 microcontroller:
+Raspberry Pi offers the following design files for the RP2350 microcontroller:
 
-* https://pip.raspberrypi.com/documents/RP-008295-DS[Minimal Viable Board] (KiCad). This download provides two design files because there's two packages for RP2350.
+* https://pip.raspberrypi.com/documents/RP-010328-CA[RP2350A Minimal Viable Board] (KiCad), a reference for creating a minimal RP2350A board.
+* https://pip.raspberrypi.com/documents/RP-010329-CA[RP2350B Minimal Viable Board] (KiCad), a reference for creating a minimal RP2350B board.
 * https://pip.raspberrypi.com/documents/RP-008395-DS[VGA Carrier Board] (KiCad), a reference for using a Raspberry Pi Pico board for multimedia (also relevant to RP2040).
 
 IMPORTANT: Designs are provided 'as-is' and the author disclaims all warranties with regard to the design, including all implied warranties of merchantability and fitness. In no event shall the author be liable for any special, direct, indirect, or consequential damages or any damages whatsoever resulting from loss of use, data, or profits, whether in an action of contract, negligence, or other tortious action, arising out of or in connection with the use or performance of the design.
